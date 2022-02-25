@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto8
+  post_build:
+    commands:
+      - echo "Start Maven Packaging"
+      - mvn package
+      - mv target/spring-boot-jpa-h2-2.4.1.jar ROOT.jar
+artifacts:
+  files:
+    - ROOT.jar
+    - .ebextensions/**/*
