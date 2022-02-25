@@ -9,6 +9,7 @@ phases:
       - echo "Start Maven Packaging"
       - mvn package
       - mv target/spring-boot-jpa-h2-2.4.1.jar ROOT.jar
+      - echo "Installed the maven and jar files copying"
 artifacts:
   files:
     - ROOT.jar
